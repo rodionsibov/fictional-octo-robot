@@ -5,7 +5,7 @@ import queryDB from "./queryDB.js";
 
 export default async function addData(info) {
   try {
-    const answer = await inquirer.prompt([
+    const answers = await inquirer.prompt([
       {
         type: "input",
         name: "name",
@@ -35,9 +35,9 @@ export default async function addData(info) {
 
     const data = {
       id: uuidv4(),
-      name: answer.name,
-      phone: answer.phone,
-      age: answer.age,
+      name: answers.name,
+      phone: answers.phone,
+      age: answers.age,
     };
 
     info.push(data);
