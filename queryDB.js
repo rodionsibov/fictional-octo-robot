@@ -1,19 +1,20 @@
 import fs from "fs";
-import { exit } from "process";
 
 export default async function queryDB(externalFunction) {
   try {
     let info = [];
+
     if (fs.existsSync("db.json")) {
-      await fs.readFile("db.json", function (error, data) {
-        if (error) {
-          console.log("Reading File Failed!", error);
+      await fs.readFile("db.json", function (err, data) {
+        info = JSON.parse(data.toString());
+        console.log(info);
+
+        if (err) {
+          console.log(err);
           return;
         }
 
-        info = JSON.parse(data.toString());
-
-        if (externalFunction && !error) {
+        if (externalFunction && !err) {
           externalFunction(info);
           return;
         }
@@ -25,6 +26,6 @@ export default async function queryDB(externalFunction) {
       }
     }
   } catch (error) {
-    console.log("Something went wrong", error);
+    console.error(`Something Happened: ${error.message}`);
   }
 }
