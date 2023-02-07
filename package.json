@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-cli-crud",
+  "version": "1.0.0",
+  "description": "Nodejs CRUD Command Line Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodionsibov/fictional-octo-robot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/rodionsibov/fictional-octo-robot/issues"
+  },
+  "homepage": "https://github.com/rodionsibov/fictional-octo-robot#readme",
+  "dependencies": {
+    "inquirer": "^9.1.4",
+    "uuid": "^9.0.0"
+  }
+}
