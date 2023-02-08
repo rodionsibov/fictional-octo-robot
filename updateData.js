@@ -15,7 +15,7 @@ export default async function updateData(info) {
       },
     ]);
 
-    let user;
+    let current;
     info.forEach((element) => {
       if (element.id === answers.recordID) {
         current = element;
