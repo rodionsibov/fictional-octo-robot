@@ -28,7 +28,7 @@ export default async function updateData(info) {
   }
 }
 
-async function updateDetails(user, info) {
+async function updateDetails(current, info) {
   try {
     const feedbacks = await inquirer.prompt([
       {
